@@ -43,8 +43,8 @@ module.exports = async function loadRocketsData(req, res) {
       }
     })
 
-    return res.status(200).send(json2csv.parse(csv))
+    return res.status(200).send(json2csv.parse(csv));
   } catch (error) {
-    return res.status(400).json({error: error.message})
+    return res.status(400).json({error: error.message});
   }
 }
