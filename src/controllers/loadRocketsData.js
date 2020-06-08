@@ -36,10 +36,10 @@ module.exports = async function loadRocketsData(req, res) {
 
     const csv = filteredData.map(rocket => {
       return {
-        name: rocket.rocket.rocket.name,
-        mission_name: rocket.mission_name,
-        is_in_future: rocket.upcoming,
-        launch_date: new Date(rocket.launch_date_unix * 1000).toISOString(),
+        "Rocket's name": rocket.rocket.rocket.name,
+        "Mission's name": rocket.mission_name,
+        "Is the mission in the future?": rocket.upcoming,
+        "Launch date": new Date(rocket.launch_date_unix * 1000).toISOString(),
       }
     })
 
